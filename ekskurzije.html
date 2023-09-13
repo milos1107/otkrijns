@@ -1,0 +1,528 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ekskurzije</title>
+
+    <!-- swiper css link -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <!-- cdn link za font awesome -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- custom css  -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!-- header sekcija pocetak-->
+
+    <section class="header">
+      <a href="index.php" class="logo"><span>Upoznaj </span>Novi Sad</a>
+
+      <nav class="navbar">
+        <a href="ekskurzije.php">Ekskurzije</a>
+        <a href="bukiraj.php">Bukiraj</a>
+        <a href="about.php">O nama</a>
+      </nav>
+      <!-- ...ostali HTML kod... -->
+      <div id="cart-container" style="display: none;">
+  <h2>Korpa</h2>
+  <div class="cart-content">
+      <ul id="cart-items">
+          <!-- Ovde će se prikazivati stavke iz korpe -->
+      </ul>
+      <p>Ukupno: $<span id="cart-total">0</span></p>
+  </div>
+  <button id="clear-cart">Isprazni korpu</button>
+</div>
+
+<!-- ...ostali HTML kod... -->
+
+
+      <div id="menu-btn" class="fas fa-bars"></div>
+    </section>
+
+    <!-- header sekcija kraj -->
+
+    <div class="heading" style="background: url(mainPage/eksBg.jpg) no-repeat">
+      <h1>Ekskurzije</h1>
+    </div>
+
+    <!-- ekskurzije sekcija pocetak -->
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Vodiči</title>
+</head>
+<body>
+<h1 class="heading-title">NASI VODICI</h1>
+<h2 class="heading-title2">Izaberite vaseg vodica u toku odabira turisticke ture</h2>
+  <section class="vodic-sekcija">
+    
+    <div class="vodic">
+      <img src="ekskurzije/vodici/vodic1.jpg" alt="Slika osobe 1">
+      <h3>Lazar Savic</h3>
+      <p>Lazar je strastveni turistički vodič sa višegodišnjim iskustvom. Sa svojim bogatim poznavanjem istorije, umetnosti i lokalne kulture, Lazar pruža nezaboravna iskustva posetiocima. Osim što poseduje duboko znanje o svakom mestu koje vodi, Lazar je takođe ljubitelj planinarenja i fotografije. Njegova entuzijastična ličnost i sposobnost da stvori opuštenu i informativnu atmosferu čine ga omiljenim među putnicima svih uzrasta.</p>
+    </div>
+
+    <div class="vodic">
+      <img src="ekskurzije/vodici/vodic2.jpg" alt="Slika osobe 2">
+      <h3>Sofija Milosavljev</h3>
+      <p>Sofija je entuzijastični vodič koji voli istraživati lokalne umetničke i kulturne scene. Njeno duboko razumevanje savremenih umetničkih trendova doprinosi jedinstvenom iskustvu za umetnički nastrojene turiste. Pored toga, ona je i talentovana slikarka i muzičarka. Sofija je poznata po svojoj kreativnosti i sposobnosti da poveže istoriju sa savremenim uticajima, što čini njene ture dinamičnim i inspirativnim.</p>
+    </div>
+
+    <div class="vodic">
+      <img src="ekskurzije/vodici/vodic3.jpg" alt="Slika osobe 3">
+      <h3>Jelena Zivkov</h3>
+      <p>Jelena je iskusna vodička sa strašću prema avanturama i prirodi. Sa svojim poznavanjem ekosistema, planinskih staza i tajnih kutaka, ona vodi posetioce na nezaboravna istraživanja prirode. Njena topla i brižna ličnost čini je omiljenom među porodicama i ljubiteljima prirode. Pored toga, Jelena je i volonterka u lokalnim projektima za očuvanje prirode, te tako doprinosi i zaštiti okoline koju vodi.</p>
+    </div>
+
+    <div class="vodic">
+      <img src="ekskurzije/vodici/vodic4.jpg" alt="Slika osobe 4">
+      <h3>Ana Blagojevic</h3>
+      <p>Ana je vodička koja svojim šarmom i energijom osvaja srca turista. Svojom strašću prema gastronomiji i lokalnoj kuhinji, ona ne samo da vodi posetioce kroz atrakcije, već im omogućava da iskuse ukuse i arome destinacije. Pored toga, Ana je vešta u pričanju priča i legendi koje čine istoriju destinacije živopisnom. Njeno živahno prisustvo i sposobnost da se prilagodi potrebama svake grupe čine je izuzetnom vodičkom.</p>
+    </div>
+  </section>
+</body>
+</html>
+
+
+
+
+    <section class="packages">
+      <h1 class="heading-title">KUPI KARTU!</h1>
+
+      <div class="box-container">
+        <div class="box">
+          <div class="image">
+            <img src="ekskurzije/centar.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h3>Novi Sad: Privatna pešačka tura centrom grada i tvrđavom</h3>
+            <h2 class="cena">CENA:$12</h2>
+            <p>
+              Istražite najlepše delove grada uz vodiča koji će vam otkriti
+              istoriju i kulturnu baštinu. Doživite autentično iskustvo sa
+              prijateljima i porodicom.
+            </p>
+            <button
+              class="buy-button"
+              onclick="addToCart('PESACKA TURA CENTROM GRADA', 12)"
+            >
+              Kupi
+            </button>
+            
+          </div>
+
+
+
+<label for="guide" class="label">Izaberi vodiča:</label>
+<select id="guide" name="guide" class="large-dropdown">
+  <option value="lazar">Lazar</option>
+  <option value="jelena">Jelena</option>
+  <option value="sofija">Sofija</option>
+  <option value="ana">Ana</option>
+</select>
+
+
+
+
+        </div>
+        
+
+        <div class="box">
+          <div class="image">
+            <img src="ekskurzije/vino.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h3>Novi Sad: Wine Tasting Tour</h3>
+            <h2 class="cena">CENA:$25</h2>
+
+            <p>
+              Otkrijte čarobni svet vina kroz posetu vinarijama u okolini Novog
+              Sada. Uživajte u degustaciji vrhunskih vina i saznajte više o
+              procesu proizvodnje vina.
+            </p>
+            <button
+              class="buy-button"
+              onclick="addToCart('WINE TASTING TOUR', 25)"
+            >
+            Kupi
+            </button>
+          </div>
+          <label for="guide" class="label">Izaberi vodiča:</label>
+<select id="guide" name="guide" class="large-dropdown">
+  <option value="lazar">Lazar</option>
+  <option value="jelena">Jelena</option>
+  <option value="sofija">Sofija</option>
+  <option value="ana">Ana</option>
+</select>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="ekskurzije/bike.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h3>Novi Sad: Bike Tour of Fruška Gora National Park</h3>
+            <h2 class="cena">CENA:$15</h2>
+            <p>
+              Pedalirajte kroz prelepe pejzaže Fruške Gore, nacionalnog parka
+              koji se nalazi u blizini Novog Sada. Otkrijte skrivene manastire,
+              uživajte u prirodi i upijajte svež vazduh dok istražujete ovaj
+              prelepi region biciklom.
+            </p>
+            <button
+              class="buy-button"
+              onclick="addToCart('BIKE TOUR', 15)"
+            >
+            Kupi
+            </button>
+          </div>
+          <label for="guide" class="label">Izaberi vodiča:</label>
+<select id="guide" name="guide" class="large-dropdown">
+  <option value="lazar">Lazar</option>
+  <option value="jelena">Jelena</option>
+  <option value="sofija">Sofija</option>
+  <option value="ana">Ana</option>
+</select>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="ekskurzije/vinarijaKovacevic.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h3>Ekskluzivni obilazak vinarije Kovacevic</h3>
+            <h2 class="cena">CENA:$30</h2>
+            <p>
+              Ekskluzivni obilazak vinarije Kovačević - uživajte u degustaciji
+              vrhunskih vina, upoznajte proces proizvodnje i istražite prelepe
+              vinograde.
+            </p>
+            <button
+              class="buy-button"
+              onclick="addToCart('VINARIJA KOVACEVIC', 30)"
+            >
+            Kupi
+            </button>
+          </div>
+          <label for="guide" class="label">Izaberi vodiča:</label>
+<select id="guide" name="guide" class="large-dropdown">
+  <option value="lazar">Lazar</option>
+  <option value="jelena">Jelena</option>
+  <option value="sofija">Sofija</option>
+  <option value="ana">Ana</option>
+</select>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="ekskurzije/sremskiKarlovci.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h3>Obilazak Sremskih Karlovca</h3>
+            <h2 class="cena">CENA:$25</h2>
+            <p>
+              Uživajte u obilasku pitoresknog gradića Sremskih Karlovaca i
+              upoznajte njegovu bogatu istoriju i kulturu. Posetite prelepe
+              barokne zgrade, prošetajte kroz šarmantne ulice i posetite
+              značajne lokalitete kao što su Karlovačka gimnazija i Saborna
+              crkva. Nakon obilaska, uživajte u autentičnom sremskom rucku koji
+              obuhvata ukusna tradicionalna jela i poznate sremske vinske
+              specijalitete.
+            </p>
+            <button
+              class="buy-button"
+              onclick="addToCart('OBILAZAK SREMSKIH KALOVACA', 25)"
+            >
+              Kupi</button
+            >
+          </div>
+          <label for="guide" class="label">Izaberi vodiča:</label>
+<select id="guide" name="guide" class="large-dropdown">
+  <option value="lazar">Lazar</option>
+  <option value="jelena">Jelena</option>
+  <option value="sofija">Sofija</option>
+  <option value="ana">Ana</option>
+</select>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="ekskurzije/krstarenjeDunavom.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h3>Krstarenje Dunavom</h3>
+            <h2 class="cena">CENA:$28</h2>
+            <p>
+              Uživajte u nezaboravnom krstarenju Dunavom - istražite prelepe
+              pejzaže, obiđite značajne znamenitosti i opustite se uz predivan
+              pogled na reku.
+            </p>
+            <button
+              class="buy-button"
+              onclick="addToCart('KRSTARENJE DUNAVOM', 28)"
+            >
+              Kupi
+            </button>
+          </div>
+          <label for="guide" class="label">Izaberi vodiča:</label>
+<select id="guide" name="guide" class="large-dropdown">
+  <option value="lazar">Lazar</option>
+  <option value="jelena">Jelena</option>
+  <option value="sofija">Sofija</option>
+  <option value="ana">Ana</option>
+</select>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="ekskurzije/eks4.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h3>Nocni provod u Novom Sadu</h3>
+            <h2 class="cena">CENA:$50</h2>
+            <p>
+              Istražite uzbudljiv noćni provod u Novom Sadu - prepustite se
+              ritmu muzike u popularnim klubovima, uživajte u živopisnim
+              barovima i restoranima, i otkrijte dinamičnu noćnu scenu grada.
+            </p>
+            <button
+              class="buy-button"
+              onclick="addToCart('NOCNI PROVOD', 50)"
+            >
+              Kupi
+            </button>
+          </div>
+          <label for="guide" class="label">Izaberi vodiča:</label>
+<select id="guide" name="guide" class="large-dropdown">
+  <option value="lazar">Lazar</option>
+  <option value="jelena">Jelena</option>
+  <option value="sofija">Sofija</option>
+  <option value="ana">Ana</option>
+</select>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="ekskurzije/crveniAutobus.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h3>Obilazak najzanimljivijim autobusom</h3>
+            <h2 class="cena">CENA:$35</h2>
+            <p>
+              Razgledanje Novog Sada crvenim autobusom na sprat je jedinstveno
+              iskustvo koje vam pruža priliku da istražite grad na zanimljiv i
+              udoban način. Ovaj tip autobusa, poznat kao "hop-on hop-off"
+              autobus, omogućava vam da se vozite na otvorenom gornjem spratu,
+              pružajući panoramski pogled na atrakcije i znamenitosti grada.
+              Možete se uključiti na autobusnoj stanici, a zatim se provozati
+              kroz različite delove grada dok slušate audio-vodič koji pruža
+              informacije o mestima koja prolazite. Takođe imate mogućnost da
+              izađete na stanicama koje vas posebno zanimaju, istražite ih i
+              zatim se ponovno ukrcate na autobus kada želite nastaviti svoju
+              vožnju. Ovo je sjajan način da se upoznate sa glavnim atrakcijama
+              i lepotama Novog Sada na praktičan i zabavan način.
+            </p>
+            <button
+              class="buy-button"
+              onclick="addToCart('NAJZANIMLJIVIJI BUS', 35)"
+            > Kupi</button>
+          </div>
+          <label for="guide" class="label">Izaberi vodiča:</label>
+<select id="guide" name="guide" class="large-dropdown">
+  <option value="lazar">Lazar</option>
+  <option value="jelena">Jelena</option>
+  <option value="sofija">Sofija</option>
+  <option value="ana">Ana</option>
+</select>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="ekskurzije/petrovaradinskaTvrdjava.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h3>Petrovaradin</h3>
+            <h2 class="cena">CENA:$15</h2>
+            <p>
+              Posetite Petrovaradinsku tvrđavu i uživajte u obilasku keja kako
+              biste doživeli neke od najlepših delova Novog Sada.
+              Petrovaradinska tvrđava, poznata i kao "Gibraltar na Dunavu", je
+              utvrđeni kompleks koji se nalazi na brdu iznad Dunava. Ova
+              impozantna tvrđava ima dugu istoriju i predstavlja jednu od
+              najvažnijih vojnih građevina u regionu. Možete istražiti njene
+              zidine, kule i tunelima, i uživati u panoramskom pogledu na grad i
+              reku Dunav. Nakon posete tvrđavi, preporučuje se šetnja duž keja,
+              koji se proteže duž Dunava. Kej je popularno šetalište gde možete
+              uživati u prelepom pogledu na reku, mostove i obalu. Pored šetnje,
+              možete se opustiti na klupi, prošetati biciklom ili se zaustaviti
+              u nekom od kafića ili restorana sa pogledom na reku. Obilazak
+              Petrovaradinske tvrđave i šetnja kejom pružaju vam priliku da
+              istražite istorijsko nasleđe grada i uživate u prirodnoj lepoti
+              Dunava, stvarajući nezaboravno iskustvo u Novom Sadu.
+            </p>
+            <button
+              class="buy-button"
+              onclick="addToCart('PETROVARADIN', 15)"
+            > Kupi </button>
+          </div>
+          <label for="guide" class="label">Izaberi vodiča:</label>
+<select id="guide" name="guide" class="large-dropdown">
+  <option value="lazar">Lazar</option>
+  <option value="jelena">Jelena</option>
+  <option value="sofija">Sofija</option>
+  <option value="ana">Ana</option>
+</select>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="ekskurzije/muzej.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h3>Muzeji Vojvodine</h3>
+            <h2 class="cena">CENA:$22</h2>
+            <p>
+              Otkrijte bogatu istoriju i kulturno nasleđe Novog Sada kroz
+              fascinantan obilazak muzeja. Ispunite svoje dane umetnošću,
+              arheologijom i intrigantnim pričama.
+            </p>
+            <button
+              class="buy-button"
+              onclick="addToCart('MUZEJI', 22)"
+            > Kupi </button>
+          </div>
+          <label for="guide" class="label">Izaberi vodiča:</label>
+<select id="guide" name="guide" class="large-dropdown">
+  <option value="lazar">Lazar</option>
+  <option value="jelena">Jelena</option>
+  <option value="sofija">Sofija</option>
+  <option value="ana">Ana</option>
+</select>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="ekskurzije/eks1.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h3>Kampovanje na Štrandu</h3>
+            <h2 class="cena">CENA:$25</h2>
+            <p>
+              Ekskurzija na novosadskoj plaži Strand - uživanje na pesku,
+              kupanje u reci i sportske aktivnosti.
+            </p>
+            <button
+              class="buy-button"
+              onclick="addToCart('KAMPOVANJE NA STRANDU', 25)"
+            > Kupi </button>
+          </div>
+          <label for="guide" class="label">Izaberi vodiča:</label>
+<select id="guide" name="guide" class="large-dropdown">
+  <option value="lazar">Lazar</option>
+  <option value="jelena">Jelena</option>
+  <option value="sofija">Sofija</option>
+  <option value="ana">Ana</option>
+</select>
+        </div>
+
+        <div class="box">
+          <div class="image">
+            <img src="ekskurzije/privatnaVoznja.jpg" alt="" />
+          </div>
+          <div class="content">
+            <h3>Novi Sad: Privatna prilagođena tura sa minibusem</h3>
+            <h2 class="cena">CENA:$28</h2>
+            <p>
+              Novi Sad: Privatna prilagođena tura sa minibusem - istražite grad
+              i njegove atrakcije na ekskluzivan način. Uživajte u udobnosti
+              minibusa dok se upoznajete sa bogatom kulturnom i istorijskom
+              baštinom Novog Sada.
+            </p>
+            <button
+              class="buy-button"
+              onclick="addToCart('MINIBUS ', 28)"
+            > Kupi </button>
+          </div>
+          <label for="guide" class="label">Izaberi vodiča:</label>
+<select id="guide" name="guide" class="large-dropdown">
+  <option value="lazar">Lazar</option>
+  <option value="jelena">Jelena</option>
+  <option value="sofija">Sofija</option>
+  <option value="ana">Ana</option>
+</select>
+        </div>
+      </div>
+
+      <div class="load-more"><span class="btn">UCITAJ VISE</span></div>
+    </section>
+
+    <!-- ekskurzije sekcija kraj -->
+
+    <!-- footer sekcija pocetak -->
+
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>Brzi linkovi</h3>
+          <a href="index.php"> <i class="fas fa-angle-right"></i> Home</a>
+          <a href="blog.php"> <i class="fas fa-angle-right"></i> Blog</a>
+          <a href="ekskurzije.php">
+            <i class="fas fa-angle-right"></i> Ekskurzije</a
+          >
+          <a href="about.php"> <i class="fas fa-angle-right"></i> O nama</a>
+        </div>
+        <div class="box">
+          <h3>Extra linkovi</h3>
+          <a href="#"> <i class="fas fa-angle-right"></i> Pitaj nas</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> About us</a>
+          <a href="#"> <i class="fas fa-angle-right"></i> Privacy policy </a>
+          <a href="#"> <i class="fas fa-angle-right"></i> Terms of use</a>
+        </div>
+
+        <div class="box">
+          <h3>Kontakt</h3>
+          <a href="#"> <i class="fas fa-phone"></i> +381/69-5511-509 </a>
+          <a href="#"> <i class="fas fa-phone"></i> +381/69-5511-508 </a>
+          <a href="#">
+            <i class="fas fa-envelope"></i> pejovic.rastkoo@gmail.com
+          </a>
+          <a href="#"> <i class="fas fa-map"></i> Novi Sad, Srbija - 21000 </a>
+        </div>
+
+        <div class="box">
+          <h3>Zaprati nas</h3>
+          <a href="#"><i class="fab fa-facebook-f"></i> facebook </a>
+          <a href="#"><i class="fab fa-twitter"></i> twiter </a>
+          <a href="#"><i class="fab fa-instagram"></i> instagram </a>
+          <a href="#"><i class="fab fa-linkedin"></i> linkedin </a>
+        </div>
+      </div>
+
+      <div class="credit">
+        Kreirano od <span>Fimekovih web dizajnera</span> | all rights reserved!
+      </div>
+    </section>
+
+    <!-- footer sekcija kraj -->
+
+    <!-- swiper js link -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- custom js file link -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
